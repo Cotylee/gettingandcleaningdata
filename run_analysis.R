@@ -89,6 +89,10 @@ run_analysis <- function(){
 #this section merges Subject, Activity, and X data in that order
  dat <- cbind(subj,Activity,x)
 
-
+#this section condenses data to averages
+ 
+ tiny<-aggregate(. ~Subject + Activity, dat, mean)
+tiny<-tiny[order(tiny$Subject,tiny$Activity),]
+ write.table(tiny, file = "tidydata.txt",row.name=FALSE)
 
 }
