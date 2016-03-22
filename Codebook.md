@@ -1,10 +1,13 @@
 ---
 output: html_document
 ---
-title: "codebook"
+title: "code book"
 author: "Coty Webb"
 date: "March 22, 2016"
 output: html_document
+
+The code executed by the run_analysis.R script does many things, it is annotated with in the code for clarity.
+The code first checks to make sure the data is loaded in the working directory  if not it will download it from the internet. Next the code extracts subject, x and y data then merges test and train data. It than renames variable to their descriptive names found in the features file. Next it finishes renaming the columns by descriptively the subject and activity names, It subsets the data taking only variables of interest. The code cleans up the column names and makes them more readable by removing extra characters and bettering abbreviations. Finally the compiles a tidy data set ready for downstream processing.
 
 The subjects are identified by number. Subject is used as an ID variable as is Activity
 
@@ -14,7 +17,7 @@ ID Variables
 * "Subject"
 * "Activity"
 
-Measurment Variables
+Measurement Variables
 
 * "tBodyAcc Mean  X"
 * "tBodyAcc Mean  Y"
